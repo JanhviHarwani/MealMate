@@ -1,4 +1,6 @@
 import React from "react";
+import Card from "./Card";
+import './RecipeForm.css'
 
 function RecipeForm({ getData }) {
   const onSubmitHandler = (data) => {
@@ -11,52 +13,65 @@ function RecipeForm({ getData }) {
     getData(finalData);
   };
   return (
+    <Card>
     <React.Fragment>
       <form
-        style={{ textAlign: "center" }}
+        className="customClass"
         onSubmit={(data) => {
           onSubmitHandler(data);
         }}
-      >
-        <label htmlFor="food_items">
-          All the Ingredients: <input type="text" id="food_items" />
+      > 
+      <div className="customDiv">
+        <label className="customField" htmlFor="food_items">
+          All the Ingredients: 
         </label>
+        <input className="customField" type="text" id="food_items" />
+        </div>
         <br />
         <br />
-        <label htmlFor="spice_level">
+        <div className="customDiv">
+        <label className="customField" htmlFor="spice_level">
           Please Select Your Spice Level:
-          <select id="spice_level">
+        </label>
+        <select className="customField" id="spice_level">
             <option value={"Low Heat"}>Low Heat</option>
             <option value={"Medium Heat"}>Medium Heat</option>
             <option value={"Spicy"}>Spicy</option>
           </select>
-        </label>
+        </div>
         <br />
         <br />
-        <label htmlFor="cuisine">
+        <div className="customDiv">
+        <label className="customField" htmlFor="cuisine">
           Preferred Cuisine:
-          <input type="text" id="cuisine" />
         </label>
+          <input className="customField" type="text" id="cuisine" />
+        </div>
         <br />
         <br />
-        <label htmlFor="is_veg">
+        <div className="customDiv">
+        <label className="customField" htmlFor="is_veg">
           What do you prefer?
-          <select id="is_veg">
+        </label>
+          <select className="customField" id="is_veg">
             <option value={"is_veg"}>Vegeterian</option>
             <option value={"is_non_veg"}>Non-Vegeterian</option>
           </select>
-        </label>
+        </div>
         <br />
         <br />
-        <label htmlFor="allergy">
+        <div className="customDiv">
+        <label className="customField" htmlFor="allergy">
           Do you have any allergies?
-          <input type="text" id="allergy" />
         </label>
+          <input className="customField" type="text" id="allergy" />
+        </div>
         <br />
         <br />
-        <button type="submit">GET RECIPE!</button>
+        <button className="submitButton" type="submit">⭐🌟 GET RECIPE 🌟⭐</button>
       </form>
     </React.Fragment>
+    </Card>
   );
 }
 

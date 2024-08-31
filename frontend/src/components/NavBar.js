@@ -6,7 +6,7 @@ function NavBar({cogWheel, logo}){
     return (
         <div className='nav'>
             <div id='logo'>
-                <img src = {logo}/>
+                <img width="60%" src = {logo} alt='mealmate navbar'/>
             </div>
 
             <button id='cogwheel'>

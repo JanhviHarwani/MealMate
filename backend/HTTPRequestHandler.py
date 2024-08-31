@@ -38,7 +38,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
         # Sending response
         self._set_response()
-        self.wfile.write(json.dumps("Mushroom-Spinach Scrambled Eggs and Colombian Scrambled Eggs.").encode('utf-8'))
+        self.wfile.write(json.dumps("You can make Mushroom-Spinach Scrambled Eggs and Colombian Scrambled Eggs!").encode('utf-8'))
         
     def do_GET(self):
         # Predefined data to be included in the response

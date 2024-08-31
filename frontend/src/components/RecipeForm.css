@@ -1,0 +1,23 @@
+.customClass {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.customDiv{
+    display: flex;
+    justify-content: space-between;
+}
+.customFields{
+    display: flex;
+}
+.submitButton{
+    padding: 20px;
+    background-color: #8CA944;
+    font-family: 'Montserrat';
+    border-radius: 10px;
+    border: 1px solid #c3c3c3;
+    cursor: pointer;
+    color: #163832;
+    font-weight: bolder;
+
+}
